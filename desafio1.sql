@@ -74,7 +74,9 @@ CREATE TABLE IF NOT EXISTS `SpotifyClone`.`album` (
   `album_name` VARCHAR(45) NOT NULL,
   `artist_id` INT NOT NULL,
   `year` YEAR NOT NULL,
-  PRIMARY KEY (`album_id`)
+  PRIMARY KEY (`album_id`),
+  FOREIGN KEY (`artist_id`)
+    REFERENCES `SpotifyClone`.`artist` (`artist_id`)
 ) ENGINE = InnoDB;
 
 INSERT INTO SpotifyClone.album (album_name, artist_id, `year`)
