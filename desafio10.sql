@@ -4,6 +4,6 @@ SELECT
 FROM SpotifyClone.reproduction_history AS rh
 INNER JOIN SpotifyClone.user AS u ON rh.user_id = u.user_id
 INNER JOIN SpotifyClone.song AS s ON rh.song_id = s.song_id
-WHERE u.plan_id IN (1 , 2)
+WHERE u.plan_id IN (1 , 4)
 GROUP BY nome
 ORDER BY nome;
